@@ -13,6 +13,7 @@ import { MenuPostComponent } from './components/menu-post/menu-post.component';
 
 import { AngularModule } from './material.module';
 import { FirestoreModule } from './firestore.module';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FirestoreModule } from './firestore.module';
     FormPostComponent,
     ViewPostComponent,
     ListPostsComponent,
-    MenuPostComponent
+    MenuPostComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
