@@ -1,6 +1,3 @@
-<p>
-  {{title}} works!
-</p>
 <div class="container-grid" *ngIf="posts.length > 0; else elseTemplate">
   <div class="item" *ngFor="let post of posts">
     <p>{{post.title}}</p>

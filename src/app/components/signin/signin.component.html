@@ -1,0 +1,14 @@
+<div class="content">
+  <div class="form-container">
+    <h2 class="title">Sign in</h2>
+    <form class="form" (ngSubmit)="login()">
+      <mat-form-field>
+        <input matInput type="email" name="mail" [(ngModel)]="mail" placeholder="Email" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput type="text" name="pass" [(ngModel)]="pass" placeholder="Password" required>
+      </mat-form-field>
+      <button mat-flat-button color="accent">Sign in</button>
+    </form>
+  </div>
+</div>

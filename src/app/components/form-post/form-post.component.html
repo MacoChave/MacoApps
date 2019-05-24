@@ -1,3 +1,22 @@
-<p>
-  form-post works!
-</p>
+<div class="container-form">
+  <form (ngSubmit)="addPost()">
+    <mat-form-field>
+      <mat-label>Category</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let category of categories" [value]="selected">
+          {{category.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="text" name="title" [(ngModel)]="post.title" placeholder="Title">
+    </mat-form-field>
+    <mat-form-field>
+      <textarea matInput type="text" name="resume" [(ngModel)]="post.resume" placeholder="Resume of app"></textarea>
+    </mat-form-field>
+    <mat-form-field>
+      <textarea matInput type="text" name="contain" [(ngModel)]="post.contain" placeholder="Description of app"></textarea>
+    </mat-form-field>
+    <button mat-flat-button color="accent">Save</button>
+  </form>
+</div>
