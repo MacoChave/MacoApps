@@ -5,6 +5,7 @@ import { MenuPostComponent } from './components/menu-post/menu-post.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { SigninComponent } from './components/signin/signin.component';
+import { ViewPostComponent } from './components/view-post/view-post.component';
 
 const routes: Routes = [
   { path: '',
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path: 'app-admin',
     component: AdminComponent
+  },
+  {
+    path: 'app-view-post',
+    component: ViewPostComponent
   },
   { path: '**', component: PageNotFoundComponent }
 ];

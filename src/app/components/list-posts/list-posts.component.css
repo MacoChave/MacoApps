@@ -1,0 +1,24 @@
+.container-grid {
+    margin: 40pt;
+    display: grid;
+    min-height: 400px;
+    grid-gap: 30pt;
+}
+
+.container-grid .item {
+    background: whitesmoke;
+    color: #1d1d1d;
+    border-radius: 0 0 .5em .5em;
+    box-shadow: 1px 1px 3px -1px #1d1d1d;
+}
+
+.container-grid .header {
+    background: purple;
+    color: whitesmoke;
+    line-height: 2;
+    text-align: center;
+}
+
+.container-grid .content {
+    padding: 10pt;
+}

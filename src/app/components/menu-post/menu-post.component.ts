@@ -1,6 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
-import 'hammerjs';
 import { ThemePalette } from '@angular/material/core';
+import { Category } from 'src/app/models/catagory';
+import { CategoryService } from 'src/app/services/category.service';
+import 'hammerjs';
 
 @Component({
   selector: 'app-menu-post',
@@ -11,14 +13,14 @@ export class MenuPostComponent implements OnInit {
 
   background = 'primary';
 
-  public titles: string[] = [
-    'Windows',
-    'Android',
-    'C/C++',
-    'Web'
-  ]
-  constructor() { }
+  categories: Category[];
 
-  ngOnInit() {  }
+  constructor(private db: CategoryService) { }
+
+  ngOnInit() {
+    this.db.getCategories().subscribe(data => {
+      this.categories = data;
+    })
+  }
 
 }

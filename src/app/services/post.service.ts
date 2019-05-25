@@ -25,7 +25,6 @@ export class PostService {
   }
 
   getPosts(collection: string) {
-    // this.postCollection = this.db.collection<Post>(collection);
     this.getCollection(collection);
     this.posts = this.postCollection.snapshotChanges().pipe(
       map(actions => {

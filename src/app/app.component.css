@@ -1,0 +1,7 @@
+.header {
+    padding: 10pt;
+    height: 30pt;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
