@@ -17,21 +17,23 @@ export class AuthService {
   login(mail: string, pass: string){
     try {
       this.mAuth.auth.signInWithEmailAndPassword(mail, pass);
-      this.router.navigate(['app-admin']);
+      this.next();
     } catch (e) {
       alert(`¡Error! ${e.message}`);
     }
   }
 
   logout() {
-    this.mAuth.auth.signOut();
-    localStorage.removeItem('user');
-    this.router.navigate(['app-signin']);
+    if (this.verifySession()) {
+      this.mAuth.auth.signOut();
+      localStorage.removeItem('user');
+      this.back();
+    }
   }
 
   verifySession() {
     const user = JSON.parse(localStorage.getItem('user'));
-    return user !== null;
+    return (user !== null);
   }
 
   setUp() {
@@ -45,5 +47,13 @@ export class AuthService {
         return false;
       }
     })
+  }
+
+  next() {
+    this.router.navigate(['app-admin']);
+  }
+
+  back() {
+    this.router.navigate(['app-signin']);
   }
 }

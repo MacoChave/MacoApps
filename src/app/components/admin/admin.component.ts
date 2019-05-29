@@ -11,9 +11,8 @@ export class AdminComponent implements OnInit {
   constructor(private authService: AuthService) { }
 
   ngOnInit() {
-    if (!this.authService.verifySession) {
-      this.authService.logout();
-    }
+    if (!this.authService.verifySession())
+      this.authService.back();
   }
 
   logout() {

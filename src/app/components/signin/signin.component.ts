@@ -13,7 +13,10 @@ export class SigninComponent implements OnInit {
 
   constructor(private authService: AuthService) { }
 
-  ngOnInit() { }
+  ngOnInit() { 
+    if (this.authService.verifySession())
+      this.authService.next();
+  }
 
   login() {
     this.authService.login(this.mail, this.pass);
