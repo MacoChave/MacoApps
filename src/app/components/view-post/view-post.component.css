@@ -2,13 +2,15 @@
     padding: 30pt;
     display: grid;
     grid-gap: 10pt;
-    grid-template-areas: "title"
-                         "preview"
-                         "contain";
+    grid-template-areas:    "title title"
+                            "preview preview"
+                            "contain contain"
+                            "empty date";
 }
 
 .title {
     grid-area: title;
+    line-height: 2;
 }
 
 .preview {
@@ -17,4 +19,17 @@
 
 .contain {
     grid-area: contain;
+}
+
+.date {
+    grid-area: date;
+}
+
+@media screen and (min-width: 769px) {
+    .container {
+        grid-template-areas:    "title"
+                                "preview contain"
+                                "preview contain"
+                                "empty date";
+    }
 }

@@ -49,6 +49,6 @@
         grid-template-areas: "info description"
                              "resume description"
                              "resume description"
-                             "save save";
+                             "empty save";
     }
 }
