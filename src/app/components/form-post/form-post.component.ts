@@ -25,6 +25,7 @@ export class FormPostComponent implements OnInit {
   }
 
   addPost() {
+    this.post.date_publish = Date.now();
     this.postService.addPost(this.selected, this.post);
     this.post = {};
   }

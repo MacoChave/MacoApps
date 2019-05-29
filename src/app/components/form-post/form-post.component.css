@@ -1,0 +1,54 @@
+.form {
+    display: grid;
+    grid-gap: 10pt;
+    grid-template-areas: "info info"
+                         "resume resume"
+                         "description description"
+                         "save save";
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    grid-area: info;
+}
+
+.resume {
+    grid-area: resume;
+}
+
+.resume textarea {
+    height: 6em;
+}
+
+.description {
+    grid-area: description;
+}
+
+.description textarea {
+    height: 12em;
+}
+
+.save {
+    grid-area: save;
+}
+
+@media screen and (min-width: 426px) {
+    .info {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .info {
+        flex-direction: column;
+    }
+
+    .form {
+        grid-template-areas: "info description"
+                             "resume description"
+                             "resume description"
+                             "save save";
+    }
+}

@@ -3,5 +3,5 @@ export interface Post {
     title?: string;
     resume?: string;
     contain?: string;
-    date_publish?: Date;
+    date_publish?: number;
 }

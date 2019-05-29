@@ -1,0 +1,10 @@
+.container {
+    padding: 10pt;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.container app-form-post {
+    width: 100%;
+}

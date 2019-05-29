@@ -1,8 +1,7 @@
 .container-grid {
-    margin: 40pt;
+    margin: 20pt;
     display: grid;
-    min-height: 400px;
-    grid-gap: 30pt;
+    grid-gap: 20pt;
 }
 
 .container-grid .item {
@@ -21,4 +20,16 @@
 
 .container-grid .content {
     padding: 10pt;
+}
+
+@media screen and (min-width: 426px) {
+    .container-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .container-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
